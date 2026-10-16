@@ -4,9 +4,11 @@
   "private": true,
   "packageManager": "pnpm@12.3.4",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3000",
+    "dev:alt": "next dev --port 3002",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rd /s /q .next 2>nul & echo Limpieza completa"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
