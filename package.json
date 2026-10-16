@@ -1,18 +1,15 @@
 {
-  "name": "my-project",
+  "name": "ktf-web",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "dev": "next dev --port 3000",
     "dev:alt": "next dev --port 3002",
     "build": "next build",
-    "start": "next start",
-    "clean": "rd /s /q .next 2>nul & echo Limpieza completa"
+    "start": "next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
-    "@neondatabase/serverless": "^1.2.0",
     "@vercel/analytics": "1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
