@@ -1,0 +1,38 @@
+================================================================================
+CARPETA DE IMÁGENES DE PRODUCTOS DE LA TIENDA KTF
+================================================================================
+
+Para agregar las imágenes de tus productos manualmente:
+
+1. Guarda tus fotos en esta carpeta:
+   public/productos/
+   
+   Ejemplos de nombres de archivo recomendados:
+   - vendas.jpg
+   - protector-bucal.jpg
+   - guantes-entrenamiento.jpg
+   - espinilleras.jpg
+   - short-muay-thai.jpg
+   - camiseta-ktf.jpg
+   - hoodie-ktf.jpg
+   - proteina-whey.jpg
+   - creatina.jpg
+   - bebida-isotonica.jpg
+   - shake-proteina.jpg
+   - agua-alcalina.jpg
+
+2. Abre el archivo:
+   data/productos.ts
+
+3. En el producto que desees, añade o edita la propiedad "imagen":
+   {
+     id: 1,
+     nombre: 'Vendas para manos',
+     descripcion: 'Vendas elásticas de 4,5 m para proteger nudillos y muñecas.',
+     precio: 12,
+     categoria: 'Equipamiento',
+     imagen: '/productos/vendas.jpg'  <--- AQUÍ PONES LA RUTA
+   }
+
+4. Si dejas la propiedad "imagen" sin poner o vacía, la página mostrará automáticamente el emoji correspondiente a su categoría como respaldo.
+================================================================================
