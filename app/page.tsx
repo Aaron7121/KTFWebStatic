@@ -92,8 +92,16 @@ export default function Page() {
       </section>
 
       {/* Servicios */}
-      <section id="servicios" className="border-b-2 border-white/15 bg-black">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-10">
+      <section id="servicios" className="relative border-b-2 border-white/15 bg-black overflow-hidden">
+        {/* Fondo con imagen y opacidad controlada para máxima legibilidad */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 transition-opacity"
+          style={{ backgroundImage: "url('/Servicios1.jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/90" aria-hidden="true" />
+
+        <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-10">
           <div className="mb-12 flex flex-col justify-between gap-6 border-b-2 border-white/20 pb-8 sm:flex-row sm:items-end">
             <h2 className="text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Elige cómo<br /><span className="text-[#D4AF37]">entrenar.</span></h2>
             <p className="max-w-xs text-sm leading-6 text-white/55">Cuatro servicios. Precios mensuales aquí; trimestral, semestral y anual en la página de planes.</p>
@@ -103,7 +111,7 @@ export default function Page() {
             {SERVICIOS.map(s => {
               const Icono = ICONOS[s.icono]
               return (
-                <article key={s.id} className={`flex flex-col border-2 p-6 ${s.destacado ? 'border-[#D4AF37] bg-[#D4AF37]/10' : 'border-white/15 bg-[#081522]'}`}>
+                <article key={s.id} className={`flex flex-col border-2 p-6 backdrop-blur-sm ${s.destacado ? 'border-[#D4AF37] bg-[#D4AF37]/15' : 'border-white/15 bg-[#081522]/90'}`}>
                   <div className="mb-5 flex items-start justify-between">
                     <Icono className="text-[#D4AF37]" size={32} />
                     {s.destacado && <span className="bg-[#D4AF37] px-2 py-1 text-[10px] font-black text-black">El más completo</span>}
@@ -128,7 +136,7 @@ export default function Page() {
               ['Personal training', `${formatUSD(PERSONAL_TRAINING_HORA)} por hora de clase`],
               ['Inscripción', `${formatUSD(INSCRIPCION)}, una sola vez`],
             ].map(([t, d]) => (
-              <div key={t} className="bg-black px-6 py-5"><dt className="text-xs font-black uppercase tracking-wider text-[#D4AF37]">{t}</dt><dd className="mt-1 text-sm text-white/75">{d}</dd></div>
+              <div key={t} className="bg-black/90 backdrop-blur-sm px-6 py-5"><dt className="text-xs font-black uppercase tracking-wider text-[#D4AF37]">{t}</dt><dd className="mt-1 text-sm text-white/75">{d}</dd></div>
             ))}
           </dl>
         </div>
@@ -143,8 +151,16 @@ export default function Page() {
       </section>
 
       {/* Personalizado */}
-      <section id="personalizado" className="border-b-2 border-white/15 bg-black">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
+      <section id="personalizado" className="relative border-b-2 border-white/15 bg-black overflow-hidden">
+        {/* Fondo con imagen y opacidad controlada para máxima legibilidad */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 transition-opacity"
+          style={{ backgroundImage: "url('/Personalizado.jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/90" aria-hidden="true" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
           <div>
             <h2 className="text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] sm:text-6xl">Un coach<br />solo para <span className="italic text-[#D4AF37]">ti.</span></h2>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/60">
@@ -156,7 +172,7 @@ export default function Page() {
           </div>
           <ul className="grid gap-px border-2 border-white/15 bg-white/15 sm:grid-cols-2">
             {COACHING_PERSONALIZADO.map(c => (
-              <li key={c.titulo} className="bg-[#081522] p-6">
+              <li key={c.titulo} className="bg-[#081522]/90 backdrop-blur-sm p-6">
                 <h3 className="text-lg font-black uppercase">{c.titulo}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/55">{c.detalle}</p>
               </li>
