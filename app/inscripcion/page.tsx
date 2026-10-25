@@ -14,7 +14,7 @@ type MetodoPago = 'paypal' | 'transferencia' | 'efectivo' | 'tarjeta' | ''
 type Paso = 'datos' | 'plan' | 'metodo' | 'pago' | 'exito'
 type Estado = 'pagado' | 'pendiente-verificacion' | 'pendiente-pago'
 
-const NIVELES = ['Principiante', 'Intermedio', 'Avanzado', 'Competidor']
+const NIVELES = ['Principiante', 'Amateur', 'Semiprofecional', 'Profecional']
 const PASOS: Paso[] = ['datos', 'plan', 'metodo', 'pago', 'exito']
 const ETIQUETAS = ['Datos', 'Plan', 'Método', 'Confirmar', 'Listo']
 
